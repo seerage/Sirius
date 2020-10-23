@@ -1,3 +1,39 @@
 @import config
 
-// CUSTOM SASS
+.container
+  box-sizing: content-box
+  max-width: 1170px
+  padding-left: 15px
+  padding-right: 15px
+  margin: auto
+
+.success
+  position: fixed
+  top: 50%
+  right: 50%
+  margin-right: -165px
+  z-index: 10
+  background-color: #ffffff
+
+.input-block
+  &__input
+    display: block
+    width: 100%
+
+@include media-breakpoint-down(lg)
+  .container
+    max-width: 960px
+
+@include media-breakpoint-down(md)
+  .container
+    max-width: 720px
+
+@include media-breakpoint-down(sm) 
+  .container
+    max-width: 540px
+
+@include media-breakpoint-down(xs) 
+  .container
+    max-width: 100%
+
+@import parts/header
