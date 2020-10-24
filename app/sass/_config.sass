@@ -4,7 +4,8 @@ $accent: #E7292A // Accent Color
 $fontsize: 16px // Body Font Size
 $textcolor: #020C15 // Text Color
 $system: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
-$roboto: Montserrat, sans-serif // Montserrat Font Family
+$montserrat: Montserrat, sans-serif // Montserrat Font Family
+$exo: Exo, sans-serif // Exo Font Family
 
 // Bootstrap compatible gutter variable => $gutter
 $grid-gutter-width: 20px
@@ -31,6 +32,7 @@ $gutter: $grid-gutter-width
 
 @include font('Montserrat', normal, 300, '../fonts/Montserrat-Light.woff2')
 @include font('Montserrat', normal, 500, '../fonts/Montserrat-Medium.woff2')
+@include font('Exo', normal, 500, '../fonts/Exo-Regular.woff2')
 
 
 // GENERAL DOCUMENT STYLES
@@ -50,7 +52,7 @@ input, textarea
 		border-color: green
 
 body
-	font-family: $roboto
+	font-family: $montserrat
 	font-weight: 300
 	font-size: $fontsize
 	min-width: 320px
