@@ -1,0 +1,92 @@
+.footer
+  background-color: #0a1a32
+  padding: 50px 0
+  color: #ffffff
+  font-family: $montserrat
+  &__mobile
+    display: none
+  &__main
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__flex-box
+    display: flex
+    justify-content: space-around
+  &__wrapper
+    display: flex
+  &__item
+    &_center
+      text-align: center
+    &_right
+      text-align: right
+  &__navigation
+    margin-top: 20px
+    &_center
+      justify-content: center
+  &__social
+    margin-right: auto
+    path
+      fill: #ffffff
+      &:hover
+        fill: #ffffff
+
+.footer-phone
+  display: flex
+  align-items: center
+  margin-bottom: 7px
+  &__tel
+    color: #ffffff
+    &:hover
+      color: #ffffff
+      text-decoration: none
+  &__icon
+    margin-right: 15px
+
+
+.rights
+  margin-top: 20px
+  font-size: 14px
+
+.footer-text
+  font-size: 14px
+  margin-bottom: 5px
+
+@include media-breakpoint-down(md)
+  .footer
+    &__main
+      display: none
+    &__mobile
+      display: block
+    &__item
+      margin-bottom: 15px
+      text-align: center
+
+  .footer-text
+    margin-right: 15px
+
+@include media-breakpoint-down(xs)
+  .footer
+    &__flex-box
+      flex-direction: column-reverse
+      justify-content: center
+      text-align: center
+      align-items: center
+    &__wrapper
+      justify-content: center
+      align-items: center
+
+    .footer-text
+      line-height: 1
+
+  .phone
+      justify-content: center
+      margin-top: 5px
+
+  .rights
+    margin: 0
+
+  .navigation
+    &__link
+      &_white
+        margin: 0
+        margin: 0 5px
