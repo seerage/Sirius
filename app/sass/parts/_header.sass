@@ -1,17 +1,15 @@
-.mobile-menu
-  display: none
-
 .header
   display: flex
   justify-content: space-between
   align-items: center
   padding: 15px 0
-  background-color: #ffffff
   &__item
     &_flex
       display: flex
       align-items: center
 
+.main
+  position: relative
 .navigation
   &__list
     list-style: none
@@ -43,12 +41,20 @@
   margin-right: 45px
   &__icon
     margin-right: 10px
+  &__link
+    &:hover
+      color: transparent
   path
     fill: $accent
+    transition: all .3s ease
+    &:hover
+      fill: darken($accent, 7%)
 
 .phone
   &__icon
     margin-right: 10px
+    &:hover
+      color: transparent
   &__tel
     font-weight: 600
 
