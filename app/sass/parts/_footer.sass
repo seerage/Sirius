@@ -21,6 +21,8 @@
       text-align: right
   &__navigation
     margin-top: 20px
+    &_center
+      justify-content: center
   &__social
     margin-right: auto
     path
@@ -34,6 +36,9 @@
   margin-bottom: 7px
   &__tel
     color: #ffffff
+    &:hover
+      color: #ffffff
+      text-decoration: none
   &__icon
     margin-right: 15px
 
@@ -56,23 +61,21 @@
       margin-bottom: 15px
       text-align: center
 
-@include media-breakpoint-down(sm) 
-  .phone
-    &__tel
-      display: block
+  .footer-text
+    margin-right: 15px
 
 @include media-breakpoint-down(xs)
   .footer
     &__flex-box
-      flex-direction: column
+      flex-direction: column-reverse
       justify-content: center
       text-align: center
+      align-items: center
     &__wrapper
       justify-content: center
       align-items: center
 
     .footer-text
-      margin: 0
       line-height: 1
 
   .phone
