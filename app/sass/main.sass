@@ -1,6 +1,7 @@
 @import config
 
 .container
+  position: relative
   box-sizing: content-box
   max-width: 1170px
   padding-left: 15px
@@ -37,6 +38,13 @@
     background-color: darken($accent, 7%)
     text-decoration: none
 
+.section-heading
+  font-weight: 500
+  font-size: 30px
+  margin-bottom: 30px
+  line-height: 1.4
+  color: $accent
+
 @include media-breakpoint-down(lg)
   .container
     max-width: 960px
@@ -53,5 +61,9 @@
   .container
     max-width: 100%
 
+  .section-heading
+    font-size: 25px
+
 @import parts/header
 @import parts/mainscreen
+@import parts/about
