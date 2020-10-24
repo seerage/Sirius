@@ -30,7 +30,7 @@ let paths = {
 
 	deploy: {
 		hostname:    'nomoreli@nomorelies.ru', // Deploy hostname
-		destination: 'www/nomorelies.ru', // Deploy destination
+		destination: 'www/nomorelies.ru/sirius', // Deploy destination
 		include:     [/* '*.htaccess' */], // Included files to deploy
 		exclude:     [ '**/Thumbs.db', '**/*.DS_Store' ], // Excluded files from deploy
 	},
