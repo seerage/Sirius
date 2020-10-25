@@ -1,0 +1,149 @@
+.numbers
+  position: relative
+  z-index: 2
+  display: flex
+  justify-content: space-between
+  width: 100%
+  padding-right: 100px
+  margin-top: 40px
+  &__item
+  &__count
+    font-family: $exo
+    font-size: 50px
+    color: $accent
+    margin-bottom: 6px
+  &__text
+    font-size: 17px
+    font-weight: 300
+    line-height: 1.5
+
+.about
+  padding-top: 100px
+  padding-bottom: 120px
+  &__x-image 
+    position: absolute
+    bottom: -280px
+    right: -190px
+  &__flex-box
+    display: flex
+    justify-content: space-between
+  &__content
+    width: 600px
+    margin-right: 60px
+  &__image
+    position: relative
+    margin-top: 35px
+    margin-left: 35px
+    height: 100%
+    z-index: 2
+    &_md
+      display: none
+    &_xs 
+      display: none
+    &:before
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: -35px
+      left: -35px
+      border: 4px solid $accent
+      z-index: -1
+
+.text-block
+  padding-bottom: 40px
+  border-bottom: 0.5px solid #d0d0d0
+  p
+    margin-bottom: 25px
+
+@include media-breakpoint-down(lg)
+  .about
+    &__content
+      margin-right: 0
+      width: 500px
+
+@include media-breakpoint-down(md)
+  .about
+    padding-bottom: 70px
+    &__x-image
+      width: 370px
+      right: 0
+      bottom: -230px
+      img
+        width: 100%
+        height: auto
+    &__content
+      width: 410px
+      margin-left: 40px
+    &__image
+      display: none
+      margin-left: 20px
+      &:before
+        top: -20px
+        left: -20px
+      &_md  
+        display: block
+
+  .text-block
+    font-size: 15px
+    padding-bottom: 20px
+    p
+      margin-bottom: 15px
+
+  .numbers
+    margin-top: 20px
+    padding-right: 0
+    &__count
+      font-size: 40px
+
+@include media-breakpoint-down(sm) 
+  .about
+    padding-bottom: 0
+    padding-top: 80px
+    &__x-image
+      width: 250px
+      bottom: -150px
+    &__image
+      margin-bottom: 20px
+      &:before
+        width: 320px
+      &_md
+        display: none
+      &_xs
+        display: block
+        width: 100%
+    &__flex-box
+      flex-direction: column
+      justify-content: center
+    &__content
+      width: 100%
+      margin-left: 0
+
+@include media-breakpoint-down(xs) 
+  .about
+    padding-top: 60px
+    &__x-image
+      width: 180px
+      bottom: -100px
+    &__image
+      box-sizing: border-box
+      margin: 0
+      padding-top: 20px
+      padding-left: 20px
+      margin-bottom: 20px
+      &_xs
+        max-width: 320px
+      &:before
+        top: 0
+        left: 0
+        width: 100%
+        height: 95%
+      img
+        width: 100%
+        height: auto
+
+  .numbers
+    &__count
+      font-size: 35px
+    &__text
+      font-size: 14px

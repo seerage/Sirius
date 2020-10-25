@@ -1,3 +1,123 @@
 @import config
 
-// CUSTOM SASS
+.container
+  position: relative
+  box-sizing: content-box
+  max-width: 1170px
+  padding-left: 15px
+  padding-right: 15px
+  margin: auto
+
+.success
+  position: fixed
+  top: 50%
+  right: 50%
+  margin-right: -200px
+  z-index: 10
+  background-color: #ffffff
+
+.btn
+  width: 226px
+  height: 53px
+  display: flex
+  justify-content: center
+  align-items: center
+  font-size: 17px
+  color: #ffffff
+  background-color: $accent
+  border-radius: 5px
+  box-shadow: 4px 4px 4px rgba(235, 27, 27, 0.15)
+  transition: all 0.3s ease
+  border: none
+  &:hover
+    color: #ffffff
+    background-color: darken($accent, 7%)
+    text-decoration: none
+
+.section-heading
+  font-weight: 500
+  font-size: 30px
+  margin-bottom: 30px
+  line-height: 1.4
+  color: $accent
+
+#map
+  width: 100%
+  height: 410px
+
+.form
+  background-color: #ffffff
+  box-sizing: border-box
+  padding: 30px 35px
+  box-shadow: 0px 0px 20px rgba(181, 181, 181, 0.3)
+  &_remodal
+    box-shadow: none
+    padding: 0
+    width: 100%
+    br
+      display: none
+  &__heading
+    font-size: 21px
+    font-weight: 500
+    margin: 0
+    margin-bottom: 25px
+    color: $accent
+  &__text
+    font-family: $montserrat
+    font-size: 14px
+    font-weight: 300
+    margin-top: 10px
+
+.remodal
+  max-width: 400px
+
+.remodal-close
+  right: 0
+  left: inherit
+
+.input-block
+  &__input
+    display: block
+    width: 100%
+    box-shadow: 0px 0px 15px rgba(181, 181, 181, 0.3)
+    background-color: #ffffff
+    padding: 10px 16px
+    margin-bottom: 25px
+    border: none
+    font-weight: 300
+    &_half
+      width: 48%
+  &__flex-box
+    display: flex
+    justify-content: space-between
+  &__btn
+    &_center
+      margin: auto
+    
+
+@include media-breakpoint-down(lg)
+  .container
+    max-width: 960px
+
+@include media-breakpoint-down(md)
+  .container
+    max-width: 720px
+
+@include media-breakpoint-down(sm) 
+  .container
+    max-width: 540px
+
+@include media-breakpoint-down(xs) 
+  .container
+    max-width: 100%
+
+  .section-heading
+    font-size: 25px
+
+@import parts/header
+@import parts/mainscreen
+@import parts/about
+@import parts/our-products
+@import parts/delivery
+@import parts/contact
+@import parts/footer

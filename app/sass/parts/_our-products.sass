@@ -1,0 +1,114 @@
+.our-products
+	padding: 105px 0
+	position: relative
+	&:before
+		position: absolute
+		left: 0
+		bottom: 0
+		content: ''
+		width: 100%
+		height: 40%
+		background: #F5F2E5
+		z-index: -1
+	
+	.cards__wrapper
+		margin-top: 35px
+		display: flex
+		justify-content: center
+
+		.card
+			display: flex
+			justify-content: space-around
+			align-items: center
+			flex-direction: column
+			width: 293px
+			height: 310px
+			background: #FFFFFF
+			border: 0.5px solid rgba(0, 0, 0, 0.2)
+			box-sizing: border-box
+			cursor: pointer
+			transition: 0.5s
+			&:hover
+				box-shadow: 5px 5px 5px 5px rgba(141, 141, 141, 0.15)
+				transform: scale(1.03)
+				.card__btn
+					display: flex
+					margin-top: 25px
+					text-decoration: none
+			&__block
+				display: flex
+				justify-content: center
+				align-items: space-around
+				flex-direction: column
+			&__img
+				text-align: center
+				img
+					width: 100%
+			&__title
+				font-weight: 500
+				font-size: 17px
+				color: #020C15
+				text-align: center
+			&__btn
+				display: none
+				justify-content: center
+				align-items: center
+				width: 188px
+				height: 44px
+				background: $accent
+				border-radius: 5px
+				color: #ffffff
+				font-weight: 500
+				font-size: 17px
+				border: none
+				text-align: center
+				margin-top: 20px
+				margin-bottom: 10px
+
+@include media-breakpoint-down(md)
+	.our-products
+		padding: 40px 0
+		position: relative
+		&:before
+			position: absolute
+			left: 0
+			top: 50%
+			margin-top: -18%
+			height: 50%
+		.cards__wrapper
+			flex-wrap: wrap
+			.card
+				&__btn
+					display: block
+
+@include media-breakpoint-down(sm)
+	.our-products
+		&:before
+			position: absolute
+			left: 0
+			top: 50%
+			margin-top: -30%
+			height: 50%
+		.cards__wrapper
+			.card
+				flex-direction: row
+				justify-content: space-around
+				width: 344px
+				height: 166px
+				&__img
+					img
+						width: 80%
+						height: 80%
+				&__block
+					margin-right: 10px
+					.card__btn
+						width: 163px
+				
+
+@include media-breakpoint-down(xs)
+	.our-products
+		.cards__wrapper
+			.card
+				width: 344px
+				height: 166px
+			

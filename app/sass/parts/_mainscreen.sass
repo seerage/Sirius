@@ -1,0 +1,121 @@
+.main
+  background: url('../images/dest/main-bg.png') no-repeat center / cover
+
+.offer
+  padding: 150px 0 220px 0
+  width: 590px
+  &__heading
+    font-size: 40px
+    margin-bottom: 20px
+    line-height: 1.4
+  &__text
+    margin-bottom: 30px
+
+.mobile-menu
+  position: absolute
+  z-index: 5
+  background-color: rgba(225,225,225, .7)
+  top: 0
+  bottom: 0
+  right: -312px
+  padding: 40px 0
+  text-align: right
+  width: 312px
+  transition: all .4s ease
+  overflow: hidden
+  &__list
+    padding: 0
+    margin: 0
+    list-style: none
+  &__link
+    position: relative
+    display: block
+    font-size: 25px
+    color: $textcolor
+    transition: all .1s
+    padding: 10px 40px 10px 0
+    &:hover
+      font-weight: 400
+      color: $textcolor
+      text-decoration: none
+      background-color: rgba(255, 255, 255, 0.4)
+  &__cross
+    cursor: pointer
+    padding-right: 40px
+    margin-bottom: 30px
+    path
+      fill: $accent
+  &__phone
+    margin-right: 40px
+    margin-top: 35px
+    .phone__tel
+      display: inline
+      line-height: 15px
+    .phone__icon 
+      margin-right: 10px
+      path
+        fill: $accent
+  &__social
+    margin-top: 60px
+
+.menu-wrapper
+  position: relative
+  &_overlay
+    transition: all .3s ease
+    &:before
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      z-index: 5
+      background: rgba(2, 12, 21, 0.12)
+      
+@include media-breakpoint-down(md)
+  .main
+    background: url('../images/dest/main-bg-md.png') no-repeat center / cover
+
+@include media-breakpoint-down(sm) 
+  .offer
+    width: 100%
+    padding: 120px 0
+    &__heading
+      font-size: 30px
+
+@include media-breakpoint-down(xs)
+  .main
+    background: url('../images/dest/main-bg-xs.png') no-repeat center / cover
+
+  .offer
+    &__heading
+      font-size: 25px
+    &__text
+      font-size: 14px
+
+  .mobile-menu
+    display: none
+    width: 100%
+    height: 100%
+    top: 0
+    right: 0
+    bottom: inherit
+    box-shadow: 15px 15px 15px rgba(111, 111, 111, 0.3)
+    transition: initial
+    &__phone
+      margin-top: 20px !important
+      margin-right: 0
+      display: flex
+      align-items: center
+      justify-content: center
+      &-icon
+        background: none
+        box-shadow: none
+    &__link
+      text-align: center
+      padding-right: 0
+    &__cross
+      text-align: center
+      padding-right: 0
+    &__social
+      margin: 0
+      margin-top: 40px
+      text-align: center
