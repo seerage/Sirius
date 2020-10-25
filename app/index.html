@@ -157,7 +157,7 @@
 							<h1 class="offer__heading">Закажите стройматериалы по выгодным ценам</h1>
 							<p class="offer__text">Индивидуальный подход к клиентам, продажа строительных материалов по доступным ценам</p>
 	
-							<a href="#product" class="btn slide">Выбрать товар</a>
+							<a href="#products" class="btn slide">Выбрать товар</a>
 	
 						</div>
 	
@@ -246,9 +246,9 @@
 								Щебень
 							</div>
 		
-							<button class="card__btn">
+							<a href="#modal" class="card__btn">
 								Заказать
-							</button>
+							</a>
 						</div>
 					</div>
 						
@@ -262,9 +262,9 @@
 								Битум
 							</div>
 		
-							<button class="card__btn">
+							<a href="#modal" class="card__btn">
 								Заказать
-							</button>
+							</a>
 						</div>
 					</div>
 	
@@ -278,9 +278,9 @@
 								Шлак
 							</div>
 		
-							<button class="card__btn">
+							<a href="#modal" class="card__btn">
 								Заказать
-							</button>
+							</a>
 						</div>
 					</div>
 	
@@ -294,9 +294,9 @@
 								Песок
 							</div>
 		
-							<button class="card__btn">
+							<a href="#modal" class="card__btn">
 								Заказать
-							</button>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -652,6 +652,31 @@
 		</footer>
 
 	</div>
+
+	<div class="remodal" data-remodal-id="modal">
+		<button data-remodal-action="close" class="remodal-close"></button>
+		<div class="form form_remodal">
+			<h2 class="form__heading">Оформить заявку</h2>
+			<form>
+
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="Site Name">
+				<input type="hidden" name="admin_email" value="a.seerage@yandex.ru">
+				<input type="hidden" name="form_subject" value="Form Subject">
+				<!-- END Hidden Required Fields -->
+
+				<div class="input-block">
+						<input type="text" name="Name" placeholder="Имя" required class="input-block__input">
+						<input type="text" name="Phone" placeholder="Телефон" required class="input-block__input">
+					<textarea name="Message" rows="3" placeholder="Что вас интересует?" class="input-block__input"></textarea>
+					<button class="btn input-block__btn input-block__btn_center">Отправить</button>
+				</div>
+				<p class="form__text">Нажимая кнопку отправить вы даёте согласие<br> на обработку персональных данных</p>
+
+			</form>
+		</div>
+	</div>
+
 
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<6d7c4cbe-2856-43e0-abea-64769ef9c939>" type="text/javascript"></script>	
 	<script src="js/app.min.js"></script>

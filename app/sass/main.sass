@@ -12,7 +12,7 @@
   position: fixed
   top: 50%
   right: 50%
-  margin-right: -165px
+  margin-right: -200px
   z-index: 10
   background-color: #ffffff
 
@@ -50,6 +50,12 @@
   box-sizing: border-box
   padding: 30px 35px
   box-shadow: 0px 0px 20px rgba(181, 181, 181, 0.3)
+  &_remodal
+    box-shadow: none
+    padding: 0
+    width: 100%
+    br
+      display: none
   &__heading
     font-size: 21px
     font-weight: 500
@@ -61,6 +67,13 @@
     font-size: 14px
     font-weight: 300
     margin-top: 10px
+
+.remodal
+  max-width: 400px
+
+.remodal-close
+  right: 0
+  left: inherit
 
 .input-block
   &__input
@@ -78,6 +91,8 @@
     display: flex
     justify-content: space-between
   &__btn
+    &_center
+      margin: auto
     
 
 @include media-breakpoint-down(lg)
